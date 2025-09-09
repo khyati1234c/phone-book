@@ -32,6 +32,41 @@ def deletecontact():
     else:
         print("contact not deleted")
 
+def displaycontact():
+    if phonebook:
+        print("\n------ Contact List ------")
+        for name,number in phonebook.items():
+            print(f"{name} : {number}")
+        print("--------------------------")
 
-        
+while True:
 
+    print("\n--- Phone Book Menu ---")
+
+    print("1. Add Contact")
+
+    print("2. Search Contact")
+
+    print("3. Update Contact")
+
+    print("4. Delete Contact")
+
+    print("5. Display All Contacts")
+
+    print("6. Exit")
+
+    ch=input("enter your choice :")
+
+    if ch=="1":
+        add_contact()
+
+    elif ch=="2":
+        searchcontact()
+    elif ch=="3":
+        updatecontact()
+    elif ch=="4":
+        deletecontact()
+    elif ch=="5":
+        displaycontact()
+    elif ch=="6":
+        break
